@@ -1,8 +1,7 @@
 const express = require('express');
-const { createPurchase } = require('../controllers/checkoutController');
-
 const router = express.Router();
+const checkoutController = require('../controllers/checkoutController');
 
-router.post('/checkout', createPurchase);
+router.post('/', checkoutController.createPurchase);
 
 module.exports = router;
